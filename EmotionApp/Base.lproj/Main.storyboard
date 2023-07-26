@@ -26,7 +26,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="emoji1"/>
                                         <connections>
-                                            <action selector="tappedVeryHappyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wNb-FM-8IG"/>
+                                            <action selector="tappedEmotionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lAF-yb-65o"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaI-Rm-kal">
@@ -35,7 +35,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="emoji2"/>
                                         <connections>
-                                            <action selector="tappedHappyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QJR-Ue-gIU"/>
+                                            <action selector="tappedEmotionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDQ-0s-Biz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShG-Ia-plR">
@@ -44,7 +44,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="emoji3"/>
                                         <connections>
-                                            <action selector="tappedSosoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vmK-qA-0xC"/>
+                                            <action selector="tappedEmotionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yi0-M0-ctg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJO-on-8P4">
@@ -53,7 +53,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="emoji4" title=""/>
                                         <connections>
-                                            <action selector="tappedBadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x4c-j6-a5S"/>
+                                            <action selector="tappedEmotionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0CA-DG-Bwp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbe-vn-2wu">
@@ -62,7 +62,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="emoji5"/>
                                         <connections>
-                                            <action selector="tappedVeryBadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tNk-r8-G2i"/>
+                                            <action selector="tappedEmotionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9zv-7a-rku"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -245,21 +245,21 @@
                         <outlet property="fourthView" destination="gIM-HH-HzG" id="6qE-TK-LAd"/>
                         <outlet property="secondView" destination="4Ba-EQ-9vN" id="SYE-CW-fQp"/>
                         <outlet property="thirdView" destination="hdz-pJ-5Kk" id="tPY-BQ-Krt"/>
-                        <outletCollection property="views" destination="f2j-dQ-Y89" collectionClass="NSMutableArray" id="eaB-Cw-CW9"/>
-                        <outletCollection property="views" destination="4Ba-EQ-9vN" collectionClass="NSMutableArray" id="VGY-Mt-G7J"/>
-                        <outletCollection property="views" destination="hdz-pJ-5Kk" collectionClass="NSMutableArray" id="DyW-jl-UsQ"/>
-                        <outletCollection property="views" destination="gIM-HH-HzG" collectionClass="NSMutableArray" id="BDw-dS-70j"/>
-                        <outletCollection property="views" destination="iLF-pd-zEV" collectionClass="NSMutableArray" id="FQt-Xu-Xcn"/>
-                        <outletCollection property="label" destination="xV1-UF-qYi" collectionClass="NSMutableArray" id="oSW-Mi-cvO"/>
-                        <outletCollection property="label" destination="bFp-Qe-pAC" collectionClass="NSMutableArray" id="B1n-ai-pLK"/>
-                        <outletCollection property="label" destination="5er-5I-N6f" collectionClass="NSMutableArray" id="Kvo-c1-FyA"/>
-                        <outletCollection property="label" destination="fTL-qT-7s7" collectionClass="NSMutableArray" id="0E9-Ok-oEb"/>
-                        <outletCollection property="label" destination="GCa-l1-4Db" collectionClass="NSMutableArray" id="d1v-qc-kUK"/>
+                        <outletCollection property="emotionLabel" destination="xV1-UF-qYi" collectionClass="NSMutableArray" id="oSW-Mi-cvO"/>
+                        <outletCollection property="emotionLabel" destination="bFp-Qe-pAC" collectionClass="NSMutableArray" id="B1n-ai-pLK"/>
+                        <outletCollection property="emotionLabel" destination="5er-5I-N6f" collectionClass="NSMutableArray" id="Kvo-c1-FyA"/>
+                        <outletCollection property="emotionLabel" destination="fTL-qT-7s7" collectionClass="NSMutableArray" id="0E9-Ok-oEb"/>
+                        <outletCollection property="emotionLabel" destination="GCa-l1-4Db" collectionClass="NSMutableArray" id="d1v-qc-kUK"/>
                         <outletCollection property="countLabel" destination="fCl-Qn-VtE" collectionClass="NSMutableArray" id="VCH-5M-0AJ"/>
                         <outletCollection property="countLabel" destination="F2R-G9-b1r" collectionClass="NSMutableArray" id="838-Um-UVe"/>
                         <outletCollection property="countLabel" destination="HCq-e4-VWT" collectionClass="NSMutableArray" id="M3v-N0-DCF"/>
                         <outletCollection property="countLabel" destination="Rj7-TG-6dx" collectionClass="NSMutableArray" id="Gmg-sN-NcW"/>
                         <outletCollection property="countLabel" destination="Hdb-L6-VT3" collectionClass="NSMutableArray" id="DVM-tx-WvB"/>
+                        <outletCollection property="backgroundView" destination="f2j-dQ-Y89" collectionClass="NSMutableArray" id="wcU-Bc-RDH"/>
+                        <outletCollection property="backgroundView" destination="4Ba-EQ-9vN" collectionClass="NSMutableArray" id="p0L-25-enq"/>
+                        <outletCollection property="backgroundView" destination="hdz-pJ-5Kk" collectionClass="NSMutableArray" id="ojm-wl-Vc9"/>
+                        <outletCollection property="backgroundView" destination="gIM-HH-HzG" collectionClass="NSMutableArray" id="bef-bV-r8j"/>
+                        <outletCollection property="backgroundView" destination="iLF-pd-zEV" collectionClass="NSMutableArray" id="zid-Ki-vgU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbz-wu-tOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -272,6 +272,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="S63-UE-pdo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ml1-Zy-hnZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -332,19 +333,19 @@
         <image name="emoji5" width="54" height="50"/>
         <image name="pencil.circle" catalog="system" width="128" height="123"/>
         <namedColor name="fifthColor">
-            <color red="0.24313727020000001" green="0.40000003579999999" blue="0.58823531870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.24313725490196078" green="0.40000000000000002" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="firstColor">
-            <color red="0.90588235859999999" green="0.45098042490000001" blue="0.55294120309999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.90588235294117647" green="0.45098039215686275" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="fourthColor">
-            <color red="0.72941178080000002" green="0.93333333730000001" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.72941176470588232" green="0.93333333333333335" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="secondColor">
-            <color red="0.9529411793" green="0.86666667460000002" blue="0.57647061349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.95294117647058818" green="0.8666666666666667" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="thirdColor">
-            <color red="0.97254902119999997" green="0.98039215800000001" blue="0.71372550729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.97254901960784312" green="0.98039215686274506" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

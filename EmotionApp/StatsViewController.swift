@@ -8,16 +8,16 @@
 import UIKit
 
 class StatsViewController: UIViewController {
-
+    
     @IBOutlet weak var fifthView: UIView!
     @IBOutlet weak var fourthView: UIView!
     @IBOutlet weak var thirdView: UIView!
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var firstView: UIView!
     
-    @IBOutlet var views: [UIView]!
+    @IBOutlet var backgroundView: [UIView]!
     
-    @IBOutlet var label: [UILabel]!
+    @IBOutlet var emotionLabel: [UILabel]!
     
     
     @IBOutlet var countLabel: [UILabel]!
@@ -27,8 +27,6 @@ class StatsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadVaules()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +37,7 @@ class StatsViewController: UIViewController {
     
     
     func setUI(){
-        for element in views {
+        for element in backgroundView {
             element.layer.cornerRadius = 20
         }
         
@@ -47,21 +45,20 @@ class StatsViewController: UIViewController {
     
     func loadVaules(){
         for element in tappedCount{
-            tappedCount.updateValue(UserDefaults.standard.integer(forKey: "\(element.key)"), forKey: element.key)
-            changeText()
+            tappedCount.updateValue(UserDefaults.standard.integer(forKey: "\(element.key)") , forKey: element.key)
+            changeText(element.key)
         }
     }
-
-    func changeText(){
-        for element in tappedCount{
-            switch element.key
-            {
-            case .verryHappy: countLabel[0].text = "\(element.value)점"
-            case .happy: countLabel[1].text = "\(element.value)점"
-            case .soso: countLabel[2].text = "\(element.value)점"
-            case .bad: countLabel[3].text = "\(element.value)점"
-            case .veryBad: countLabel[4].text = "\(element.value)점"
-            }
+    
+    func changeText(_ emotion: Emotion){
+        guard let count = tappedCount[emotion] else { return }
+        switch emotion
+        {
+        case .verryHappy: countLabel[0].text = "\(count)점"
+        case .happy: countLabel[1].text = "\(count)점"
+        case .soso: countLabel[2].text = "\(count)점"
+        case .bad: countLabel[3].text = "\(count)점"
+        case .veryBad: countLabel[4].text = "\(count)점"
         }
     }
 }

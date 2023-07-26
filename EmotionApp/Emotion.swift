@@ -8,12 +8,13 @@
 import Foundation
 import UIKit
 
-enum Emotion: CaseIterable {
-    case verryHappy, happy, soso, bad, veryBad
+enum Emotion: Int, CaseIterable {
+    case verryHappy = 1
+    case happy, soso, bad, veryBad
 }
 
 extension Emotion{
-    var title: String{
+    func getString() -> String {
         switch self{
         case .verryHappy: return "완전 행복 지수"
         case .happy: return "적당 미소 지수"
